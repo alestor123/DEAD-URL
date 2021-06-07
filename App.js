@@ -1,4 +1,5 @@
 const { readFileSync } = require('fs')
+const axios = require('axios')
 const rgx = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig
 module.exports = file => Urls(file)
 // filter(ln => rgx.test(ln))
@@ -10,14 +11,27 @@ function Urls (file) {
   return [...new Set(main)].filter(Boolean).filter(ln => ln.match(rgx)).map((ln, index) => {
     return {
       number: Indices(main, ln),
-      urls: [...new Set(ln.match(rgx))]
+      urls: [...new Set(ln.match(rgx))].map(async lk => {
+        return {
+          url: lk,
+          stats: await Check(lk)
+        }
+      })
     }
   })
 }
 function Indices (arr, val) {
   const indices = []
-  arr.filter((ar, index) => {
+  arr.forEach((ar, index) => {
     if (ar === val) indices.push(index + 1)
   })
   return indices
+}
+async function Check (url) {
+  try {
+    await axios.get(url)
+    return true
+  } catch (err) {
+    return false
+  }
 }

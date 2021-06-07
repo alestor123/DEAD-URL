@@ -1,8 +1,7 @@
 `---
 __Advertisement :)__
 
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image https://github.com/nodeca/babe
   resize in browser.
 - __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
   i18n with plurals support and easy syntax.
@@ -25,9 +24,11 @@ You will like those projects!
 ___
 
 ---
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image 
 
 ***
-
+https://github.com/alestor123/WHICH-ANIME/blob/master/run.js
+https://github.com/alestor123/WHICH-ANIME/blob/master/run.js
 
 ## Typographic replacements
 
