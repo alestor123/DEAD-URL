@@ -4,6 +4,7 @@ module.exports = file => {
 return Urls(file)
 }
 // filter(ln => rgx.test(ln))
+// still need fix for lot of stuff
 function Urls(file) {
 var main = readFileSync(file).toString().split('\n');
 return [...new Set(main)].filter(Boolean).filter(ln => rgx.test(ln)).map((ln,index) => {
