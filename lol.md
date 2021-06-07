@@ -1,5 +1,6 @@
----
+`---
 __Advertisement :)__
+
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
   resize in browser.
@@ -7,6 +8,8 @@ __Advertisement :)__
   i18n with plurals support and easy syntax.
 
 You will like those projects!
+
+<img src="http://localhost:3000/" >
 
 ---
 
@@ -16,7 +19,6 @@ You will like those projects!
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
-
 
 ## Horizontal Rules
 
@@ -243,3 +245,4 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 ::: warning
 *here be dragons*
 :::
+`
